@@ -17,6 +17,8 @@ let questions  =document.querySelectorAll(".question");
 let next = document.querySelector(".next");
 let marks= document.querySelector(".value");
 let display = document.querySelector(".contain");
+let user = prompt("Enter Your Name: ");
+let name =document.querySelector(".name");
 let score= 0 ;
 let currentquestion = 0;
 start.addEventListener("click",()=>{
@@ -52,6 +54,7 @@ next.addEventListener("click",()=>{
         showquestion(currentquestion);
     }else{
         disable();
+        name.innerText=user;
         marks.innerText  =score;
         display.classList.remove("hide");
     }
@@ -59,5 +62,6 @@ next.addEventListener("click",()=>{
 const disable = ()=>{
      main.classList.add("hide");
 }
+
 
 
